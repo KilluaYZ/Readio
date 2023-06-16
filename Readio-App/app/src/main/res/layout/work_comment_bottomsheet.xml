@@ -1,0 +1,98 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:background="@color/white"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:orientation="vertical"
+    android:layout_marginBottom="10dp">
+
+    <RelativeLayout
+        android:layout_alignParentTop="true"
+        android:layout_width="match_parent"
+        android:id="@+id/comment_dialog_top_bar"
+        android:layout_height="40dp">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerInParent="true"
+            android:layout_marginTop="5dp"
+            android:fontFamily="@font/yuanti"
+            android:text="作品评论"
+            android:textColor="#D2000000"
+            android:textSize="18sp"
+            android:textStyle="bold" />
+    </RelativeLayout>
+
+    <androidx.recyclerview.widget.RecyclerView
+        android:layout_below="@+id/comment_dialog_top_bar"
+        android:layout_above="@+id/fragment_comment_reply_bar"
+        android:id="@+id/dialog_recycleView"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:maxHeight="500dp"/>
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/fragment_comment_reply_bar"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true">
+
+        <androidx.cardview.widget.CardView
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:backgroundTint="@color/paler_grey"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintLeft_toLeftOf="parent"
+            app:layout_constraintRight_toLeftOf="@id/fragment_comment_cancel_reply_btn"
+            app:cardCornerRadius="10dp"
+            android:layout_marginTop="0dp"
+            android:layout_marginBottom="0dp"
+            android:layout_marginLeft="10dp"
+            android:layout_marginRight="10dp"
+            app:cardElevation="0dp">
+
+            <EditText
+                android:id="@+id/fragment_comment_bar_editText"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="10dp"
+                android:layout_marginTop="5dp"
+                android:layout_marginRight="10dp"
+                android:layout_marginBottom="5dp"
+                android:background="@null"
+                android:hint="评论支持太太吧~"
+                android:textColorHint="@color/black"
+                android:textSize="15sp" />
+
+        </androidx.cardview.widget.CardView>
+
+        <ImageView
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintRight_toRightOf="parent"
+            android:id="@+id/fragment_comment_reply_bar_btn"
+            android:layout_width="25dp"
+            android:layout_height="25dp"
+            android:layout_marginBottom="5dp"
+            android:layout_marginTop="10dp"
+            android:layout_marginLeft="10dp"
+            android:layout_marginRight="10dp"
+            android:src="@drawable/sendcomment" />
+        <ImageView
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintRight_toLeftOf="@id/fragment_comment_reply_bar_btn"
+            android:id="@+id/fragment_comment_cancel_reply_btn"
+            android:layout_width="25dp"
+            android:layout_height="25dp"
+            android:layout_margin="10dp"
+            android:visibility="gone"
+            android:src="@drawable/cancle" />
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+</RelativeLayout>

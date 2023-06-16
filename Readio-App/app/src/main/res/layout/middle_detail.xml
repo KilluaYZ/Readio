@@ -1,0 +1,50 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.coordinatorlayout.widget.CoordinatorLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/middle_detail"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <com.google.android.material.appbar.AppBarLayout
+        android:id="@+id/lucency_part"
+        android:layout_width="match_parent"
+        android:layout_height="180dp"
+        android:backgroundTint="#0000"
+        android:alpha="0">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="horizontal"
+            android:gravity="center"
+            app:layout_scrollFlags="scroll">
+        </LinearLayout>
+    </com.google.android.material.appbar.AppBarLayout>
+
+    <androidx.core.widget.NestedScrollView
+        android:id="@+id/removable_part"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:minHeight="650dp"
+        android:background="@color/white"
+        app:layout_behavior="@string/appbar_scrolling_view_behavior"
+        android:orientation="vertical">
+
+        <androidx.cardview.widget.CardView
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            app:cardPreventCornerOverlap="false"
+            app:cardUseCompatPadding="true"
+            app:cardBackgroundColor="#0000"
+            app:cardElevation="0dp">
+            <include
+                layout="@layout/removable_detail"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"/>
+
+        </androidx.cardview.widget.CardView>
+
+    </androidx.core.widget.NestedScrollView>
+
+</androidx.coordinatorlayout.widget.CoordinatorLayout>

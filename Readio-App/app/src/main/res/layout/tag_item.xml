@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="vertical">
+
+    <TextView
+        android:id="@+id/item_tagTv"
+        android:layout_width="match_parent"
+        android:gravity="left"
+        android:fontFamily="@font/miao"
+        android:textSize="15sp"
+        android:padding="15dp"
+        android:textColor="@color/title"
+        android:layout_height="wrap_content"
+        />
+</LinearLayout>

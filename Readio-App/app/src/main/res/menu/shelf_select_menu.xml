@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <item
+        android:id="@+id/yes_item"
+        android:title="确定移出书架"
+        ></item>
+    <item
+        android:id="@+id/no_item"
+        android:title="取消"
+        ></item>
+</menu>

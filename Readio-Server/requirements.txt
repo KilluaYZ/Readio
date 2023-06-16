@@ -1,0 +1,12 @@
+flask
+PyMySql
+flask_cors
+sqlalchemy
+DButils
+psutil
+flask_apscheduler
+bs4
+pdfminer
+mobi
+ebooklib
+chardet

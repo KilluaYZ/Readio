@@ -1,0 +1,52 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="60dp"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:gravity="center_vertical"
+    android:padding="10dp"
+    android:layout_marginTop="40dp">
+    <androidx.cardview.widget.CardView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:cardElevation="0dp"
+        android:fadingEdgeLength="0dp"
+        app:cardCornerRadius="6dp"
+        android:backgroundTint="#00FFFFFF">
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:padding="3dp">
+
+            <com.google.android.material.card.MaterialCardView
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                app:cardBackgroundColor="#33FFFFFF"
+                app:cardElevation="0dp"
+                app:cardCornerRadius="15dp"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintTop_toTopOf="parent"
+                >
+                <TextView
+                    android:layout_marginLeft="3dp"
+                    android:layout_marginRight="3dp"
+                    android:id="@+id/login_activity_topbar_change_view"
+                    android:padding="3dp"
+                    android:paddingLeft="10dp"
+                    android:paddingRight="10dp"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:textAlignment="center"
+                    android:layout_alignParentRight="true"
+                    android:layout_centerVertical="true"
+                    android:text="Sign up"
+                    android:textColor="#ffffff"
+                    android:textSize="15sp" />
+
+            </com.google.android.material.card.MaterialCardView>
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+    </androidx.cardview.widget.CardView>
+</RelativeLayout>

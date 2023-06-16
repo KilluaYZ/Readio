@@ -1,0 +1,84 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<androidx.cardview.widget.CardView
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    app:cardCornerRadius="8dp"
+    app:cardElevation="4dp"
+    android:background="@color/another_white">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical"
+        tools:context=".userPageActivity.newWorksActivity"
+        android:background="@color/another_white">
+        <LinearLayout
+            android:id="@+id/addTag_titleBar"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@color/blue"
+            android:padding="8dp"
+            android:elevation="3dp"
+            android:orientation="horizontal"
+            android:layout_marginBottom="5dp">
+            <ImageView
+                android:layout_width="35dp"
+                android:layout_height="35dp"
+                android:src="@drawable/happy_smile_tongue_icon"
+                android:scaleType="fitEnd"
+                android:background="#0078B5C6"/>
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="添加Tag"
+                android:layout_marginLeft="-35dp"
+                android:layout_gravity="center"
+                android:letterSpacing="0.3"
+                android:textSize="20sp"
+                android:gravity="center"
+                android:textColor="@color/title"
+                android:fontFamily="@font/miao"/>
+        </LinearLayout>
+        <EditText
+            android:id="@+id/tagName"
+            android:paddingTop="15dp"
+            android:paddingLeft="15dp"
+            android:paddingRight="15dp"
+            android:paddingBottom="5dp"
+            android:textColor="@color/grey"
+            android:hint="请输入Tag"
+            android:textStyle="italic"
+            android:textColorHint="@color/pale_grey"
+            android:fontFamily="@font/miao"
+            android:layout_width="300dp"
+            android:layout_height="wrap_content"
+            android:background="@null"/>
+        <ListView
+            android:id="@+id/tagList"
+            android:layout_width="300dp"
+            android:divider="#00000000"
+            android:layout_height="wrap_content"/>
+
+        <ImageView
+            android:layout_width="match_parent"
+            android:layout_height="1dp"
+            android:src="#81837E"
+            android:layout_marginLeft="15dp"
+            android:layout_marginRight="15dp"/>
+
+        <ImageButton
+            android:id="@+id/confirmTagButton"
+            android:layout_margin="10dp"
+            android:layout_width="40dp"
+            android:layout_height="40dp"
+            android:scaleType="fitEnd"
+            android:background="@color/another_white"
+            android:src="@drawable/rocket_startup_icon"
+            android:layout_gravity="right"/>
+    </LinearLayout>
+</androidx.cardview.widget.CardView>

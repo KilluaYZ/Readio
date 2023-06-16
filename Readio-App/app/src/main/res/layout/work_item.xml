@@ -1,0 +1,164 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="vertical"
+    android:padding="8dp">
+    <com.google.android.material.card.MaterialCardView
+
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:cardCornerRadius="8dp">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+            <LinearLayout
+                android:id="@+id/enterReadButton"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical">
+
+                <TextView
+                    android:id="@+id/workTitle"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:fontFamily="@font/yuanti"
+                    android:padding="5dp"
+                    android:text="Title"
+                    android:textColor="@color/black"
+                    android:textSize="15sp"
+                    android:textStyle="bold"/>
+
+                <TextView
+                    android:id="@+id/workContent"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:backgroundTint="@color/pale_grey"
+                    android:maxHeight="100dp"
+                    android:padding="5dp"
+                    android:text="Title"
+                    android:textSize="12sp"/>
+            </LinearLayout>
+        </LinearLayout>
+    </com.google.android.material.card.MaterialCardView>
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal">
+        <androidx.cardview.widget.CardView
+            android:layout_marginTop="5dp"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            app:cardCornerRadius="15dp"
+            app:cardElevation="0dp"
+            android:layout_marginLeft="2dp">
+            <TextView
+                android:paddingLeft="3dp"
+                android:paddingRight="3dp"
+                android:paddingTop="1dp"
+                android:paddingBottom="1dp"
+                android:id="@+id/workTag"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textSize="12sp"
+                android:background="#BEFFFFFF"
+                android:text=""/>
+        </androidx.cardview.widget.CardView>
+        <androidx.cardview.widget.CardView
+            android:layout_marginTop="5dp"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            app:cardCornerRadius="15dp"
+            app:cardElevation="0dp"
+            android:layout_marginLeft="6dp">
+            <TextView
+                android:paddingLeft="3dp"
+                android:paddingRight="3dp"
+                android:paddingTop="1dp"
+                android:paddingBottom="1dp"
+                android:id="@+id/workTag1"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textSize="12sp"
+                android:background="#BEFFFFFF"
+                android:text=""/>
+        </androidx.cardview.widget.CardView>
+
+        <androidx.cardview.widget.CardView
+            android:layout_marginTop="5dp"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            app:cardCornerRadius="15dp"
+            app:cardElevation="0dp"
+            android:layout_marginLeft="6dp">
+            <TextView
+                android:paddingLeft="3dp"
+                android:paddingRight="3dp"
+                android:paddingTop="1dp"
+                android:paddingBottom="1dp"
+                android:id="@+id/workTagmore"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textSize="12sp"
+                android:background="#BEFFFFFF"
+                android:text="..."/>
+        </androidx.cardview.widget.CardView>
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_marginTop="5dp"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:backgroundTint="@color/pale_grey"
+        android:orientation="horizontal">
+
+        <de.hdodenhof.circleimageview.CircleImageView
+            android:id="@+id/userAvator"
+            android:layout_width="20dp"
+            android:layout_height="20dp"
+            android:layout_centerInParent="true"
+            android:layout_gravity="left|center_vertical"
+            android:layout_weight="1"
+             />
+
+        <TextView
+            android:paddingLeft="2dp"
+            android:id="@+id/workUser"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="15"
+            android:textSize="13sp"
+            android:text="小羊同学"
+            app:autoSizeMaxTextSize="18sp"
+            app:autoSizeMinTextSize="10sp"
+            app:autoSizeStepGranularity="2sp"
+            app:autoSizeTextType="uniform"/>
+
+        <LinearLayout
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="10"
+            android:gravity="right"
+            android:orientation="horizontal" >
+
+            <ImageView
+                android:id="@+id/likePieceButton"
+                android:layout_width="0dp"
+                android:layout_height="20dp"
+                android:layout_gravity="left"
+                android:layout_weight="1"
+                android:src="@drawable/heart_plus_48" />
+
+            <TextView
+            android:id="@+id/likesNum"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:gravity="right"
+            android:text="31" />
+        </LinearLayout>
+    </LinearLayout>
+</LinearLayout>

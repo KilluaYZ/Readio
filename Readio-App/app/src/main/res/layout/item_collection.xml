@@ -1,0 +1,85 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+    <LinearLayout
+        android:padding="10dp"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal">
+
+        <com.google.android.material.card.MaterialCardView
+            android:id="@+id/collectReadButton"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:minHeight="60dp"
+            android:layout_weight="7"
+            android:layout_margin="5dp"
+            app:cardCornerRadius="8dp"
+            android:background="@color/white">
+            <LinearLayout
+                android:id="@+id/ReadCollectionButton"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical">
+
+                <TextView
+                    android:id="@+id/collectionWorkTitle"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:fontFamily="@font/yuanti"
+                    android:padding="5dp"
+                    android:text="Title"
+                    android:textColor="@color/black"
+                    android:textSize="15sp"
+                    android:textStyle="bold"/>
+
+                <TextView
+                    android:id="@+id/collectionWorkContent"
+                    android:layout_width="match_parent"
+                    android:layout_height="40dp"
+                    android:backgroundTint="@color/pale_grey"
+                    android:padding="5dp"
+                    android:text="Title"
+                    android:textSize="12sp"/>
+            </LinearLayout>
+
+        </com.google.android.material.card.MaterialCardView>
+        <LinearLayout
+            android:layout_margin="5dp"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="2">
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:orientation="vertical"
+                android:layout_gravity="center_horizontal">
+                <TextView
+                    android:id="@+id/collectionWorkcollectNum"
+                    android:layout_width="match_parent"
+                    android:layout_height="0dp"
+                    android:layout_weight="1"
+                    android:textSize="12sp"
+                    android:textColor="@color/dark_grey"
+                    android:fontFamily="@font/yuanti"
+                    android:text="收藏数："
+                    android:textStyle="bold" />
+                <TextView
+                    android:id="@+id/collectionWorkButton"
+                    android:layout_width="wrap_content"
+                    android:layout_height="0dp"
+                    android:layout_weight="1"
+                    android:layout_marginTop="5dp"
+                    android:background="@drawable/biankuang"
+                    android:textSize="12sp"
+                    android:textColor="@color/dark_grey"
+                    android:fontFamily="@font/yuanti"
+                    android:text="取消收藏"
+                    android:textStyle="bold"
+                    android:gravity="center_vertical"/>
+            </LinearLayout>
+        </LinearLayout>
+    </LinearLayout>
+</LinearLayout>

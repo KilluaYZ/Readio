@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <item
+        android:id="@+id/navigation_commend"
+        android:icon="@drawable/loyalty_48"
+        android:iconTint="@drawable/loyalty_48"
+        android:title="" />
+    <item
+        android:id="@+id/navigation_shelf"
+        android:icon="@drawable/menubook_48"
+        android:iconTint="@drawable/menubook_48"
+        android:title="" />
+    <item
+        android:id="@+id/navigation_works"
+        android:icon="@drawable/local_library_48"
+        android:iconTint="@drawable/local_library_48"
+        android:title="" />
+    <item
+        android:id="@+id/navigation_userpage"
+        android:icon="@drawable/person_48"
+        android:iconTint="@drawable/person_48"
+        android:title="" />
+
+</menu>

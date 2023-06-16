@@ -1,0 +1,130 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:orientation="horizontal"
+    android:id="@+id/rl_item"
+    android:padding="10dp">
+
+    <de.hdodenhof.circleimageview.CircleImageView
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        android:id="@+id/comment_user_avator"
+        android:layout_width="40dp"
+        android:layout_height="40dp"
+        android:src="@drawable/xiaoyang" />
+
+    <LinearLayout
+        android:id="@+id/commentLinearlayout"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintLeft_toRightOf="@id/comment_user_avator"
+        app:layout_constraintRight_toRightOf="parent"
+        android:layout_toRightOf="@+id/comment_user_avator"
+        android:layout_marginLeft="5dp">
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal">
+            <TextView
+                android:id="@+id/commentUserText"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:textSize="15sp"
+                android:textColor="#454545"
+                android:text="呆头鹅"/>
+            <TextView
+                android:id="@+id/comment_to_userText"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:textSize="10sp"
+                android:textColor="#A6A6A6"/>
+
+        </LinearLayout>
+        <TextView
+            android:layout_marginTop="6dp"
+            android:id="@+id/commentContentText"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="好棒棒哦，呆头鹅好喜欢!好棒棒哦，呆头鹅好喜欢!好棒棒哦，呆头鹅好喜欢!好棒棒哦，呆头鹅好喜欢!好棒棒哦，呆头鹅好喜欢!好棒棒哦，呆头鹅好喜欢!好棒棒哦，呆头鹅好喜欢!好棒棒哦，呆头鹅好喜欢!好棒棒哦，呆头鹅好喜欢!好棒棒哦，呆头鹅好喜欢!好棒棒哦，呆头鹅好喜欢!好棒棒哦，呆头鹅好喜欢!好棒棒哦，呆头鹅好喜欢!"/>
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_marginTop="10dp"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+            <TextView
+                app:layout_constraintTop_toTopOf="parent"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintLeft_toLeftOf="parent"
+                android:id="@+id/commentTimeText"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textColor="#A6A6A6"
+                android:textSize="10sp"
+                android:text="02-10 22:56"/>
+
+            <LinearLayout
+                app:layout_constraintTop_toTopOf="parent"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintRight_toRightOf="parent"
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:orientation="horizontal"
+                android:layout_alignParentRight="true">
+
+<!--                <ImageView-->
+<!--                    android:layout_marginLeft="5dp"-->
+<!--                    android:textAlignment="viewEnd"-->
+<!--                    android:id="@+id/delete_comment_btn"-->
+<!--                    android:layout_width="20dp"-->
+<!--                    android:layout_height="20dp"-->
+<!--                    android:src="@drawable/trush_bin"/>-->
+
+                <TextView
+                    android:layout_marginBottom="2dp"
+                    android:layout_width="wrap_content"
+                    android:layout_height="20dp"
+                    android:id="@+id/delete_comment_btn"
+                    android:layout_marginRight="5dp"
+                    android:text="删除"
+                    android:textColor="@color/blue"
+                    android:textSize="14sp"
+                    android:layout_gravity="center_vertical"
+                    />
+
+                <ImageView
+                    android:layout_marginLeft="5dp"
+                    android:textAlignment="viewEnd"
+                    android:id="@+id/reply_send_btn"
+                    android:layout_width="20dp"
+                    android:layout_height="20dp"
+                    android:src="@drawable/another_comment"/>
+
+                <ImageView
+                    android:layout_marginLeft="5dp"
+                    android:layout_marginRight="5dp"
+                    android:textAlignment="viewEnd"
+                    android:id="@+id/likePieceCommentButton"
+                    android:layout_width="20dp"
+                    android:layout_height="20dp"
+                    android:src="@drawable/likecomment"/>
+
+                <TextView
+                    android:layout_marginRight="5dp"
+                    android:id="@+id/likePieceCommentNum"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="162"/>
+
+
+            </LinearLayout>
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+    </LinearLayout>
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>

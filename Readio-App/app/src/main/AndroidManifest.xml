@@ -1,0 +1,117 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools">
+
+    <uses-permission android:name="android.permission.INTERNET" />
+    <uses-permission android:name="android.permission.ACCESS_WIFI_STATE" />
+    <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" />
+    <uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE" />
+    <uses-permission android:name="android.permission.REQUEST_INSTALL_PACKAGES" />
+    <uses-permission android:name="android.permission.MANAGE_EXTERNAL_STORAGE"/>
+
+
+    <application
+        android:allowBackup="true"
+        android:dataExtractionRules="@xml/data_extraction_rules"
+        android:fullBackupContent="@xml/backup_rules"
+        android:icon="@mipmap/icon_readio_app"
+        android:label="@string/app_name"
+        android:networkSecurityConfig="@xml/network_security_config"
+        android:supportsRtl="true"
+        android:theme="@style/Theme.ReadIO"
+
+        tools:targetApi="31">
+        <activity
+            android:name=".ui.shelf.searchBookActivity"
+            android:exported="false"
+            android:windowSoftInputMode="adjustPan"/>
+        <activity
+            android:name=".userPageActivity.ReEditActivity"
+            android:exported="false" />
+        <activity
+            android:name=".ui.userpage.follower.FollowerActivity"
+            android:exported="false" />
+        <activity
+            android:name=".ui.userpage.subscribe.SubscriberActivity"
+            android:exported="false" />
+        <activity
+            android:name=".bookReadActivity.writeCommentActivity"
+            android:exported="false"
+            android:windowSoftInputMode="adjustResize|stateVisible" />
+        <activity
+            android:name=".userPageActivity.ReadioActivity"
+            android:exported="false" />
+        <activity
+            android:name=".bookReadActivity.allCommentActivity"
+            android:exported="false" />
+        <activity
+            android:name=".bookReadActivity.commentDetailActivity"
+            android:exported="false" />
+        <activity
+            android:name=".bookReadActivity.readBookActivity"
+            android:exported="false" />
+        <activity
+            android:name=".bookReadActivity.bookDetailActivity"
+            android:exported="false" />
+        <activity
+            android:name=".worksActivity.readWorksActivity"
+            android:exported="false" />
+        <activity
+            android:name=".userPageActivity.addTagActivity"
+            android:exported="false"
+            android:theme="@style/myDialog" />
+        <activity
+            android:name=".userPageActivity.exitEditActivity"
+            android:exported="false"
+            android:theme="@style/myDialog" />
+        <activity
+            android:name=".ui.userpage.changeAvatar.changeAvatorActivity"
+            android:exported="false" />
+        <activity
+            android:name=".ui.userpage.login.LoginActivity"
+            android:exported="false" />
+        <activity
+            android:name=".userPageActivity.editWorkActivity"
+            android:exported="false" />
+        <activity
+            android:name=".userPageActivity.dataCenterActivity"
+            android:exported="false" />
+        <activity
+            android:name=".userPageActivity.worksManageActivity"
+            android:exported="false" />
+        <activity
+            android:name=".userPageActivity.newWorksActivity"
+            android:exported="false"
+            android:theme="@style/myDialog" />
+        <activity
+            android:name=".userPageActivity.mySettingsActivity"
+            android:exported="false" />
+        <activity
+            android:name=".userPageActivity.myLikesActivity"
+            android:exported="false" />
+        <activity
+            android:name=".userPageActivity.myCollectionActivity"
+            android:exported="false" />
+        <activity
+            android:name=".MainActivity"
+            android:exported="true"
+            android:label="@string/app_name"
+            android:windowSoftInputMode="adjustPan">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+        <provider
+            android:authorities="${applicationId}.fileprovider"
+            android:name="androidx.core.content.FileProvider"
+            android:exported="false"
+            android:grantUriPermissions="true"
+            >
+            <meta-data
+                android:name="android.support.FILE_PROVIDER_PATHS"
+                android:resource="@xml/file_paths" />
+        </provider>
+    </application>
+
+</manifest>

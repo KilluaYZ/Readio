@@ -1,0 +1,58 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.cardview.widget.CardView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:orientation="vertical"
+    android:layout_width="150dp"
+    android:layout_height="150dp"
+    android:id="@+id/book_item"
+    app:cardPreventCornerOverlap="false"
+    app:cardUseCompatPadding="true"
+    app:cardBackgroundColor="@color/container_lowest"
+    app:cardCornerRadius="10dp"
+    app:cardElevation="5dp"
+
+    android:clickable="true"
+    android:focusable="true"
+    android:foreground="?android:attr/selectableItemBackground">
+    <LinearLayout
+        android:id="@+id/card_content"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical"
+        android:gravity="center">
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="120dp">
+
+            <ImageView
+                android:layout_width="match_parent"
+                android:layout_height="120dp"
+                android:gravity="center"
+                android:scaleType="fitXY"
+                android:src="@drawable/default_cover2"
+                android:id="@+id/book_cover"
+                android:contentDescription="bookcover"/>
+        </RelativeLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="35dp"
+            android:orientation="horizontal">
+            <TextView
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight="3"
+                android:fontFamily="@font/yuanti"
+                android:gravity="center"
+                android:textColor="@color/black"
+                android:id="@+id/book_title"
+                android:text="@string/book_name"
+                app:autoSizeMaxTextSize="15sp"
+                app:autoSizeMinTextSize="5sp"
+                app:autoSizeStepGranularity="2sp"
+                app:autoSizeTextType="uniform"/>
+        </LinearLayout>
+    </LinearLayout>
+
+</androidx.cardview.widget.CardView>
+

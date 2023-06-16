@@ -1,0 +1,244 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:fitsSystemWindows="true"
+    tools:context=".worksActivity.readWorksActivity">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/readTopBar"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="8dp"
+        android:layout_marginRight="8dp"
+        android:padding="10dp"
+        app:layout_constraintBottom_toTopOf="@+id/contentBar"
+        app:layout_constraintTop_toTopOf="parent">
+        <ImageView
+            android:id="@+id/exitRead"
+            android:layout_width="25dp"
+            android:layout_height="25dp"
+            android:src="@drawable/best_back"
+            app:layout_constraintLeft_toLeftOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <androidx.cardview.widget.CardView
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            app:cardCornerRadius="16dp"
+            app:cardElevation="0dp"
+            app:layout_constraintRight_toRightOf="parent"
+            android:backgroundTint="@color/paler_grey"
+            android:padding="10dp">
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal">
+            <ImageView
+                android:layout_width="20dp"
+                android:layout_height="20dp"
+                android:layout_gravity="center_vertical"
+                android:layout_marginLeft="5dp"
+                android:src="@drawable/series_box"/>
+            <TextView
+                android:layout_margin="5dp"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:id="@+id/readSerialText"
+                android:textStyle="bold"
+                android:fontFamily="@font/yuanti"
+                android:text=""/>
+            </LinearLayout>
+        </androidx.cardview.widget.CardView>
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+    <ScrollView
+        android:id="@+id/contentBar"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_marginLeft="8dp"
+        android:layout_marginTop="-10dp"
+        android:layout_marginRight="8dp"
+        android:padding="10dp"
+        android:scrollbars="none"
+        app:layout_constraintBottom_toTopOf="@+id/workCommentBar"
+        app:layout_constraintTop_toBottomOf="@+id/readTopBar">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+            <androidx.constraintlayout.widget.ConstraintLayout
+                android:id="@+id/authorBar"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                app:layout_constraintBottom_toTopOf="@id/contentBar"
+                app:layout_constraintTop_toBottomOf="@+id/readTopBar">
+
+                <de.hdodenhof.circleimageview.CircleImageView
+                    android:id="@+id/authorAvator"
+                    android:layout_width="40dp"
+                    android:layout_height="40dp"
+                    android:layout_marginTop="5dp"
+                    app:layout_constraintLeft_toLeftOf="parent"
+                    app:layout_constraintTop_toTopOf="parent" />
+
+                <LinearLayout
+                    android:id="@+id/authorInfo"
+                    android:layout_width="wrap_content"
+                    android:layout_height="50dp"
+                    android:maxWidth="230dp"
+                    android:layout_marginLeft="10dp"
+                    android:gravity="center_vertical"
+                    android:orientation="vertical"
+                    android:padding="5dp"
+                    app:layout_constraintLeft_toRightOf="@+id/authorAvator"
+                    app:layout_constraintTop_toTopOf="parent">
+
+                    <TextView
+                        android:id="@+id/readUserNameText"
+                        android:layout_width="wrap_content"
+                        android:layout_height="0dp"
+                        android:layout_weight="1"
+                        android:fontFamily="@font/yuanti"
+                        android:text=""
+                        android:textColor="@color/black"
+                        android:textSize="13sp"
+                        android:textStyle="bold" />
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="0dp"
+                        android:layout_weight="1"
+                        android:fontFamily="@font/yuanti"
+                        android:id="@+id/updateTimeTextView"
+                        android:textColor="@color/grey"
+                        android:textSize="13sp" />
+                </LinearLayout>
+
+                <androidx.cardview.widget.CardView
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent"
+                    android:layout_margin="5dp"
+                    android:backgroundTint="@color/paler_grey"
+                    android:padding="7dp"
+                    app:cardCornerRadius="15dp"
+                    app:cardElevation="0dp"
+                    app:layout_constraintRight_toRightOf="parent"
+                    app:layout_constraintTop_toTopOf="parent">
+
+                    <TextView
+                        android:id="@+id/followAuthorButton"
+                        android:layout_width="wrap_content"
+                        android:layout_height="match_parent"
+                        android:layout_marginLeft="7dp"
+                        android:layout_marginTop="3dp"
+                        android:layout_marginRight="7dp"
+                        android:layout_marginBottom="3dp"
+                        android:fontFamily="@font/yuanti"
+                        android:text="关注"
+                        android:textColor="@color/blue"
+                        android:textSize="15sp"
+                        android:textStyle="bold" />
+                </androidx.cardview.widget.CardView>
+
+            </androidx.constraintlayout.widget.ConstraintLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical">
+
+                <TextView
+                    android:id="@+id/workTitleText"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:fontFamily="@font/yuanti"
+                    android:text=""
+                    android:textColor="#C3000000"
+                    android:textSize="20sp"
+                    android:textStyle="bold"
+                    app:layout_constraintTop_toBottomOf="@+id/authorBar" />
+
+                <TextView
+                    android:id="@+id/readWorkContentText"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="5dp"
+                    android:fontFamily="@font/songti"
+                    android:text=" "
+                    android:textSize="17sp" />
+            </LinearLayout>
+        </LinearLayout>
+    </ScrollView>
+
+    <LinearLayout
+        android:id="@+id/workCommentBar"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="8dp"
+        android:layout_marginRight="8dp"
+        android:layout_marginBottom="5dp"
+        android:orientation="horizontal"
+        android:paddingLeft="10dp"
+        android:paddingRight="10dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/contentBar">
+
+        <androidx.cardview.widget.CardView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:backgroundTint="@color/paler_grey"
+            app:cardCornerRadius="22dp"
+            app:cardElevation="0dp">
+
+            <EditText
+                android:id="@+id/writeComment"
+                android:layout_width="140dp"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="10dp"
+                android:layout_marginTop="5dp"
+                android:layout_marginRight="10dp"
+                android:layout_marginBottom="5dp"
+                android:background="@null"
+                android:hint="评论支持太太吧~"
+                android:textColorHint="@color/black"
+                android:textSize="15sp" />
+        </androidx.cardview.widget.CardView>
+
+        <ImageView
+            android:id="@+id/sendPieceCommentButton"
+            android:layout_width="0dp"
+            android:layout_height="25dp"
+            android:layout_margin="5dp"
+            android:layout_weight="1"
+            android:src="@drawable/sendcomment" />
+
+        <ImageView
+            android:id="@+id/likePieceButton"
+            android:layout_width="0dp"
+            android:layout_height="25dp"
+            android:layout_margin="5dp"
+            android:layout_weight="1"
+            android:src="@drawable/like" />
+
+        <ImageView
+            android:id="@+id/collectPieceButton"
+            android:layout_width="0dp"
+            android:layout_height="25dp"
+            android:layout_margin="5dp"
+            android:layout_weight="1"
+            android:src="@drawable/collect" />
+
+        <ImageView
+            android:id="@+id/commentZoneButton"
+            android:layout_width="0dp"
+            android:layout_height="25dp"
+            android:layout_margin="5dp"
+            android:layout_weight="1"
+            android:src="@drawable/thepinglun" />
+    </LinearLayout>
+</androidx.constraintlayout.widget.ConstraintLayout>

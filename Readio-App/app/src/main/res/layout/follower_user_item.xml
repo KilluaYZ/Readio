@@ -1,0 +1,67 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_height="wrap_content"
+    android:layout_width="match_parent"
+    android:orientation="vertical"
+    >
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_margin="20dp">
+
+        <de.hdodenhof.circleimageview.CircleImageView
+            android:id="@+id/follower_activity_user_avatar"
+            android:layout_width="50dp"
+            android:layout_height="50dp"
+            app:layout_constraintLeft_toLeftOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintBottom_toBottomOf="parent"
+            android:src="@drawable/xiaoyang"
+            />
+        <TextView
+            android:id="@+id/follower_activity_user_name_text_view"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="xiaoyang"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintBottom_toTopOf="@+id/follower_activity_user_id_text_view"
+            app:layout_constraintLeft_toRightOf="@id/follower_activity_user_avatar"
+            android:layout_marginLeft="30dp"
+            android:textSize="14sp"
+            android:textStyle="bold"
+            android:textColor="#595959"
+            />
+
+        <TextView
+            android:id="@+id/follower_activity_user_id_text_view"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="123"
+            app:layout_constraintTop_toBottomOf="@+id/follower_activity_user_name_text_view"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintLeft_toRightOf="@id/follower_activity_user_avatar"
+            android:layout_marginLeft="30dp"
+            android:textSize="14sp"
+            android:textStyle="bold"
+            android:textColor="#BDBDBD"
+            />
+
+
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+    <ImageView
+        android:layout_width="match_parent"
+        android:layout_height="0.8dp"
+        android:layout_marginLeft="5dp"
+        android:layout_marginTop="5dp"
+        android:layout_marginRight="5dp"
+        android:layout_marginBottom="5dp"
+        android:src="#46B8BAB6"/>
+
+</LinearLayout>

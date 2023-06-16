@@ -1,0 +1,29 @@
+<resources>
+    <string name="app_name">ReadIO</string>
+    <string name="title_home">Home</string>
+    <string name="title_dashboard">Dashboard</string>
+    <string name="title_notifications">Notifications</string>
+    <string name="source">Source</string>
+    <string name="quote">Quote</string>
+    <string name="picture_of_book">Picture of book</string>
+    <string name="go_back">Return</string>
+    <string name="read">阅读</string>
+    <string name="add_bookmark">加入书架</string>
+    <string name="book_name">BookName</string>
+    <string name="author">Author</string>
+    <string name="book_abstract">摘要</string>
+    <string name="tag">类型</string>
+    <string name="state">是否完结</string>
+    <string name="views">浏览量</string>
+    <string name="words">字数</string>
+    <string name="comment">评论</string>
+    <!-- TODO: Remove or change this placeholder text -->
+    <string name="hello_blank_fragment">Hello blank fragment</string>
+    <string-array name="spinner_data1">
+        <item>书名</item>
+        <item>作者</item>
+    </string-array>
+
+
+
+</resources>

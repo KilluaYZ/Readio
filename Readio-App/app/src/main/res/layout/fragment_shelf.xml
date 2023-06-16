@@ -1,0 +1,104 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/shelf_fragment"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="vertical"
+    tools:context=".ui.shelf.shelfFragment">
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:layout_marginTop="5dp">
+        <androidx.cardview.widget.CardView
+            android:id="@+id/searchColumn"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="15dp"
+            android:layout_marginTop="10dp"
+            android:layout_marginRight="15dp"
+            android:layout_marginBottom="15dp"
+            app:cardCornerRadius="18dp"
+            app:cardElevation="0dp">
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="50dp"
+                android:orientation="horizontal"
+                android:background="@color/paler_grey"
+                android:gravity="center">
+                <Spinner
+                    android:id="@+id/spinner"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:entries="@array/spinner_data1"
+                    android:spinnerMode="dropdown"/>
+                <EditText
+                    android:id="@+id/edittext"
+                    android:layout_width="0dp"
+                    android:layout_weight="11"
+                    android:layout_height="match_parent"
+                    android:background="@color/paler_grey"
+                    android:hint="搜你想看~"
+                    android:maxLength="10"
+                    android:paddingStart="15dp"
+                    android:singleLine="true"
+                    android:textSize="15sp" />
+                <TextView
+                    android:id="@+id/search"
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent"
+                    android:text="搜索"
+                    android:textSize="15sp"
+                    android:textColor="#D41A97EA"
+                    android:background="@color/paler_grey"
+                    android:layout_marginEnd="8dp"
+                    android:gravity="center"/>
+            </LinearLayout>
+        </androidx.cardview.widget.CardView>
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:layout_marginTop="15dp"
+            android:layout_marginRight="15dp"
+            android:layout_marginLeft="15dp">
+            <TextView
+                android:layout_marginTop="6dp"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="我的书架"
+                android:textSize="20sp"/>
+
+            <ImageButton
+                android:id="@+id/refresh_button"
+                android:layout_width="50dp"
+                android:layout_height="45dp"
+                android:layout_alignParentEnd="true"
+                android:layout_marginEnd="5dp"
+                android:backgroundTint="#0000"
+                android:contentDescription="refresh"
+                android:scaleType="centerCrop"
+                android:src="@drawable/refresh" />
+        </RelativeLayout>
+    </LinearLayout>
+
+    <cn.ruc.readio.ui.shelf.myGridView
+        android:id="@+id/book_gridview"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:columnWidth="90dp"
+        android:gravity="center"
+        android:horizontalSpacing="10dp"
+        android:verticalSpacing="15dp"
+        android:numColumns="auto_fit"
+        android:scrollbars="none"
+        android:layout_marginRight="15dp"
+        android:layout_marginLeft="15dp">
+    </cn.ruc.readio.ui.shelf.myGridView>
+
+</LinearLayout>
+
+
